@@ -1,0 +1,294 @@
+function add{
+VM388:1 Uncaught SyntaxError: Unexpected token '{'
+function add(){
+    console.log("i am add func");
+}
+undefined
+add(10,20,20);
+undefined
+console.log(add);
+undefined
+function add(){
+    console.log("i am add", arguments.length);
+}
+undefined
+
+\\ add() - 0
+add(10,20) - 30
+add(1,2,3,4,5) - 15
+add(1,”2”,3,4,5) - 15
+add(1,”2”,3,4,”five”) - 10
+add(1,2,[3,”4”],”5”) - 15
+function one(){
+return 1;
+}  
+function two(){
+return “2”;
+} 
+add(one, two,[3,”4”,one],”1”,1); 13 \\
+VM975:4 Uncaught SyntaxError: Invalid or unexpected token
+function add(){
+    sum=0;
+    for(var i =0;i<arguments.length;i++){
+        sum=sum+arguments[i];
+    }
+    return sum;
+}
+undefined
+add(10,20,30);
+60
+add(1."2",3,4);
+VM1343:1 Uncaught SyntaxError: missing ) after argument list
+add(1,"2",3,4);
+'1234'
+parseInt(2);
+2
+parseInt(2)+3;
+5
+function add(){
+    sum=0;
+    for(var i=0;i<arguments.length; i++);
+    sum=sum+parseInt(arguments[i]);
+}
+undefined
+return sum;
+}
+VM1950:1 Uncaught SyntaxError: Illegal return statement
+function add(){
+    sum=0;
+    for(var i=0;i<arguments.length; i++);
+    sum=sum+parseInt(arguments[i]);
+}
+return sum;
+}
+VM1970:6 Uncaught SyntaxError: Illegal return statement
+function add(){
+    sum=0;
+    for(var i=0;i<arguments.length; i++);{
+    sum=sum+parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+add(10,"20",30,"2",4);
+NaN
+add(10,"2",2);
+NaN
+function add(){
+    sum=0;
+    for(var i=0;i<arguments.length; i++){
+    sum=sum+parseInt(arguments[i]);
+}
+return sum;
+}
+undefined
+add(10,"20",3);
+33
+add(10,"2","3",4);
+19
+10+NaN;
+NaN
+isNaN(10-"ten");
+true
+function add(){
+    add=x+y;
+}
+add(3,7);
+VM2463:2 Uncaught ReferenceError: x is not defined
+    at add (<anonymous>:2:5)
+    at <anonymous>:4:1
+add @ VM2463:2
+(anonymous) @ VM2463:4
+function add(){
+    sum=0;
+    for (var i=0;i<arguments.length;i++){
+        sum=sum+ isNaN(parseInt(arguments[i])?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+add("five","30","3","amit",10);
+2
+function add(){
+    sum=0;
+    for (var i=0;i<arguments.length;i++){
+        sum=sum+ (isNaN(parseInt(arguments[i])?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+VM3094:4 Uncaught SyntaxError: Unexpected token ';'
+function add(){
+    sum=0;
+    for (var i=0;i<arguments.length;i++){
+        sum=sum+ isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+VM3104:4 Uncaught SyntaxError: Unexpected token ')'
+function add(){
+    sum=0;
+    for (var i=0;i<arguments.length;i++){
+        sum=sum+ (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+add("five","30","3","amit",10);
+43
+function one()}
+return 1;
+}
+VM3199:1 Uncaught SyntaxError: Unexpected token '}'
+function one(){
+    return 1;
+}
+undefined
+function two(){
+    return 2;
+}
+undefined
+parseInt(1);
+1
+parseInt(one);
+NaN
+parseInt(one());
+1
+parseInt(two());
+2
+add(10,0ne,two,3);
+VM3598:1 Uncaught SyntaxError: Invalid or unexpected token
+add(1,2,one,two);
+3
+add(one,1,"two","2");
+3
+function add(){
+    sum=0;
+    for(var i=0;i<arguments.length;i++){
+        if(typeofarguments[i]==='function'){
+            arguments[i]=arguments[i]();
+        }
+        sum=sum+(isNaN(parseInt(argumets[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+                
+undefined
+add(one,"five","3",2);
+VM4448:4 Uncaught ReferenceError: typeofarguments is not defined
+    at add (<anonymous>:4:9)
+    at <anonymous>:1:1
+add @ VM4448:4
+(anonymous) @ VM4536:1
+function add(){
+    sum=0;
+    for(var i=0;i<arguments.length;i++){
+        if(typeof arguments[i]==='function'){
+            arguments[i]=arguments[i]();
+        }
+        sum=sum+(isNaN(parseInt(argumets[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+
+undefined
+add(one,"five","3",2);
+VM4547:7 Uncaught ReferenceError: argumets is not defined
+    at add (<anonymous>:7:33)
+    at <anonymous>:1:1
+add @ VM4547:7
+(anonymous) @ VM4551:1
+function add(){
+    sum=0;
+    for(var i=0;i<arguments.length;i++){
+        if(typeof arguments[i]==='function'){
+            arguments[i]=arguments[i]();
+        }
+        sum=sum+(isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+add(one,"five","3",2);
+6
+
+    
+
+
+
+    
+undefined
+function add(){
+    sum=0;
+    for(var i=0;i<arguments.length;i++){
+        if(arguments[i] instanceof Array){
+            for(var j=0;j<arguments[i].length; j++){
+                sum=sum + (isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]));
+            }
+            continue;
+        }
+            if(typeof arguments[i]==='function'){
+                arguments[i]=arguments[i]();
+                
+            }
+        sum= sum+ (isNaN(parseInt(arguments[i]))?0:parseIntarguments[i]));
+    }
+            return sum;
+}
+
+
+    
+VM6303:14 Uncaught SyntaxError: Unexpected token ')'
+function add(){
+    sum=0;
+    for(var i=0;i<arguments.length;i++){
+        if(arguments[i] instanceof Array){
+            for(var j=0;j<arguments[i].length; j++){
+                sum=sum + (isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]));
+            }
+            continue;
+        }
+            if(typeof arguments[i]==='function'){
+                arguments[i]=arguments[i]();
+                
+            }
+        sum= sum + (isNaN(parseInt(arguments[i]))?0:parseIntarguments[i]));
+    }
+            return sum;
+}
+
+VM6311:14 Uncaught SyntaxError: Unexpected token ')'
+function add(){
+    sum=0;
+    for(var i=0;i<arguments.length;i++){
+        if(arguments[i] instanceof Array){
+            for(var j=0;j<arguments[i].length; j++){
+                sum=sum + (isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]));
+            }
+            continue;
+        }
+            if(typeof arguments[i]==='function'){
+                arguments[i]=arguments[i]();
+                
+            }
+        sum= sum+ (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+            return sum;
+}
+
+undefined
+add(one, two, "3","five",5,[1,2]);
+14
+function jquery(){
+    console.log("I am jquery function");
+}\
+VM6674:3 Uncaught SyntaxError: Invalid or unexpected token
+function jquery(){
+    console.log("I am jquery function");
+}
+undefined
+jquery(document);
+undefined
+jquery('p');
+undefined
+var $=jquery;
+undefined
